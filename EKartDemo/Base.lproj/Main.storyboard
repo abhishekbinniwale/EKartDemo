@@ -34,6 +34,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="GADGETS" id="7Lg-jh-1cc"/>
+                    <connections>
+                        <outlet property="tableView" destination="BAv-lM-dB4" id="R3t-Op-QM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,6 +68,9 @@
                                 <state key="normal" title="Checkout">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkoutButtonAction:" destination="XE4-4y-gqK" eventType="touchUpInside" id="vSS-fh-6nb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -79,6 +85,10 @@
                         <viewLayoutGuide key="safeArea" id="v2g-jC-X0v"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="checkoutButton" destination="f8L-YR-l3v" id="jxN-cm-1KO"/>
+                        <outlet property="tableView" destination="int-0o-CDH" id="Ovk-Nr-s0p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5X8-ib-SLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +149,9 @@
                                 <state key="normal" title="Continue Shopping">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="continueShoppingAction:" destination="VYz-f3-N5b" eventType="touchUpInside" id="Tra-hz-I9d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -152,6 +165,9 @@
                         <viewLayoutGuide key="safeArea" id="ePg-uP-dzR"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="continueShoppingButton" destination="Eus-2U-mqD" id="1Iq-gc-awK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWB-fS-K4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

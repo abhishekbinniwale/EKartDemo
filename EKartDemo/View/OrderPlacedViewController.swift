@@ -10,8 +10,13 @@ import UIKit
 
 class OrderPlacedViewController: UIViewController {
 
+    @IBOutlet weak var continueShoppingButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    @IBAction func continueShoppingAction(_ sender: Any) {
+    }
+    
 }

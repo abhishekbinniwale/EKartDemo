@@ -10,9 +10,17 @@ import UIKit
 
 class ProductCheckoutViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var checkoutButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+
+    @IBAction func checkoutButtonAction(_ sender: Any) {
+    }
+    
 }
