@@ -14,6 +14,8 @@
 		481F14F624E68AC60067C7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481F14F424E68AC60067C7FE /* LaunchScreen.storyboard */; };
 		481F150124E68AC60067C7FE /* EKartDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F150024E68AC60067C7FE /* EKartDemoTests.swift */; };
 		481F150D24E68B6B0067C7FE /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F150C24E68B6B0067C7FE /* ProductListViewController.swift */; };
+		481F150F24E69FB00067C7FE /* ProductCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F150E24E69FB00067C7FE /* ProductCheckoutViewController.swift */; };
+		481F151124E69FF40067C7FE /* OrderPlacedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F151024E69FF40067C7FE /* OrderPlacedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		481F150024E68AC60067C7FE /* EKartDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKartDemoTests.swift; sourceTree = "<group>"; };
 		481F150224E68AC60067C7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481F150C24E68B6B0067C7FE /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		481F150E24E69FB00067C7FE /* ProductCheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCheckoutViewController.swift; sourceTree = "<group>"; };
+		481F151024E69FF40067C7FE /* OrderPlacedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlacedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				481F150C24E68B6B0067C7FE /* ProductListViewController.swift */,
+				481F150E24E69FB00067C7FE /* ProductCheckoutViewController.swift */,
+				481F151024E69FF40067C7FE /* OrderPlacedViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,9 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481F150F24E69FB00067C7FE /* ProductCheckoutViewController.swift in Sources */,
 				481F14EA24E68AC20067C7FE /* AppDelegate.swift in Sources */,
 				481F150D24E68B6B0067C7FE /* ProductListViewController.swift in Sources */,
 				481F14EC24E68AC20067C7FE /* SceneDelegate.swift in Sources */,
+				481F151124E69FF40067C7FE /* OrderPlacedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

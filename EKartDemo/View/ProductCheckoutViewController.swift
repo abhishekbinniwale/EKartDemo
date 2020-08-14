@@ -1,5 +1,5 @@
 //
-//  ProductListViewController.swift
+//  ProductCheckoutViewController.swift
 //  EKartDemo
 //
 //  Created by Abhishek Binniwale on 14/08/20.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController {
+class ProductCheckoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
-    
-    
 }

@@ -1,5 +1,5 @@
 //
-//  ProductListViewController.swift
+//  OrderPlacedViewController.swift
 //  EKartDemo
 //
 //  Created by Abhishek Binniwale on 14/08/20.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController {
+class OrderPlacedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    
-    
 }
