@@ -10,6 +10,10 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var productImage: CustomImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +24,13 @@ class ProductTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageView?.image = UIImage(named: "loading")
+    }
+    
+    func configureCellWithVM(viewModel : ProductViewModel) {
+        
+    }
     
 }

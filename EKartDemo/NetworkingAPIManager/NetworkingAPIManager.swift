@@ -17,15 +17,11 @@ class NetworkingAPIManager {
     let dataUrlString = "https://my-json-server.typicode.com/nancymadan/assignment/db"
     
     func fetchData(){
-        
         if let url = URL(string: dataUrlString) {
-            
             let dataTask = URLSession.shared.dataTask(with: url) { (data, respnse, error) in
-                
                 if let error = error {
                     print("error while fetching data error:\(error)")
                 }
-                
                 if let data = data {
                     do {
                         let products = try JSONDecoder().decode(Products.self, from: data)

@@ -30,7 +30,6 @@ class ProductListViewController: UIViewController , UITableViewDelegate , UITabl
             
          return cell
         }
-        
         return UITableViewCell()
     }
 }

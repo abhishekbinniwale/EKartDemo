@@ -8,19 +8,33 @@
 
 import UIKit
 
-class ProductCheckoutViewController: UIViewController {
+class ProductCheckoutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var checkoutButton: UIButton!
     
+    let cellId = "ProductTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
     }
 
 
     @IBAction func checkoutButtonAction(_ sender: Any) {
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? ProductTableViewCell {
+            //cell.configureCellWithVM(viewModel: )
+            return cell
+        }
+        return UITableViewCell()
     }
     
 }
