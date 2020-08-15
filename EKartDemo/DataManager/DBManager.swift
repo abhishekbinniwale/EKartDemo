@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DBManager {
     
@@ -14,4 +15,11 @@ class DBManager {
     
     private init() {    }
     
+    func saveDataToDB(viewModel : ProductViewModel){
+
+    }
+    
+    func fetchAllProductsAddedToCart(completion: @escaping (_ products: [ProductViewModel])->Void){
+        
+    }
 }

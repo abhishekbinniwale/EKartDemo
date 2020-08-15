@@ -23,7 +23,8 @@ struct Products : Decodable {
         case products = "products"
     }
 }
-struct Product : Decodable {
+struct Product : Identifiable,Decodable {
+    let id = UUID()
     let name : String
     let price : String
     let imageUrl : String
