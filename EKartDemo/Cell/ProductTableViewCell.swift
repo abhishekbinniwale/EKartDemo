@@ -45,6 +45,8 @@ class ProductTableViewCell: UITableViewCell {
     
     @IBAction func addToCardAction(_ sender: Any) {
         //Save it to DB to show in cart
+        
+        
     }
     
 }

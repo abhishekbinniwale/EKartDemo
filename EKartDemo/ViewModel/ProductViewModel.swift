@@ -9,7 +9,7 @@
 import Foundation
 
 class ProductViewModel: NSObject {
-    var id : UUID
+    var id : String
     var name : String
     var price : String
     var imageUrl : String
@@ -23,4 +23,13 @@ class ProductViewModel: NSObject {
         self.imageUrl = model.imageUrl
         self.rating = model.rating
     }
+    
+    init(id : String,name : String,price : String,imageUrl : String, rating : Int) {
+        self.id = id
+        self.name = name
+        self.price = price
+        self.imageUrl = imageUrl
+        self.rating = rating
+    }
+    
 }

@@ -24,7 +24,7 @@ struct Products : Decodable {
     }
 }
 struct Product : Identifiable,Decodable {
-    let id = UUID()
+    let id = UUID().uuidString
     let name : String
     let price : String
     let imageUrl : String
