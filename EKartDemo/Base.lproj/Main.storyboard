@@ -50,6 +50,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cart is Empty " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRl-M3-DJa">
+                                <rect key="frame" x="120.5" y="367" width="173" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U1L-P0-K4V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="int-0o-CDH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="541"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,10 +84,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="pRl-M3-DJa" firstAttribute="centerX" secondItem="v2g-jC-X0v" secondAttribute="centerX" id="44z-GE-hdn"/>
                             <constraint firstItem="v2g-jC-X0v" firstAttribute="trailing" secondItem="f8L-YR-l3v" secondAttribute="trailing" constant="62" id="8jt-Tl-I68"/>
                             <constraint firstItem="int-0o-CDH" firstAttribute="top" secondItem="v2g-jC-X0v" secondAttribute="top" id="VlC-7Y-BPB"/>
                             <constraint firstItem="f8L-YR-l3v" firstAttribute="leading" secondItem="v2g-jC-X0v" secondAttribute="leading" constant="63" id="WOX-Z0-YaD"/>
                             <constraint firstItem="int-0o-CDH" firstAttribute="leading" secondItem="v2g-jC-X0v" secondAttribute="leading" id="WqD-4K-66e"/>
+                            <constraint firstItem="pRl-M3-DJa" firstAttribute="centerY" secondItem="v2g-jC-X0v" secondAttribute="centerY" id="a4y-A1-K1G"/>
                             <constraint firstItem="v2g-jC-X0v" firstAttribute="trailing" secondItem="int-0o-CDH" secondAttribute="trailing" id="bej-4X-xVi"/>
                             <constraint firstItem="v2g-jC-X0v" firstAttribute="bottom" secondItem="f8L-YR-l3v" secondAttribute="bottom" constant="39" id="hX2-bO-yvb"/>
                         </constraints>
@@ -87,6 +98,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="checkoutButton" destination="f8L-YR-l3v" id="jxN-cm-1KO"/>
+                        <outlet property="emptyCartLabel" destination="pRl-M3-DJa" id="ggr-Fs-Wjc"/>
                         <outlet property="tableView" destination="int-0o-CDH" id="Ovk-Nr-s0p"/>
                     </connections>
                 </viewController>

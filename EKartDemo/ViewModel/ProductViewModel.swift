@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProductViewModel: NSObject {
+class ProductItem {
     var id : String
     var name : String
     var price : String
@@ -31,5 +31,34 @@ class ProductViewModel: NSObject {
         self.imageUrl = imageUrl
         self.rating = rating
     }
-    
 }
+
+class ProductViewModel {
+    
+    var viewModels : [ProductItem]?
+    
+    func fetchDataFromServer(compeltion: @escaping ()->Void ) {
+        NetworkingAPIManager.sharedInstance.fetchData { [weak self] (productModels) in
+            let viewModels = productModels?.map({ return ProductItem(model: $0) }) ?? []
+            self?.viewModels = viewModels
+            compeltion()
+        }
+    }
+    
+    func fetchDataFromDB(compeltion: @escaping ()->Void ){
+        DBManager.sharedInstance.fetchAllProductsAddedToCart { [weak self] (produtModels) in
+            self?.viewModels = produtModels ?? []
+            compeltion()
+        }
+    }
+    
+    func deleteOrderedProductsFromDB(){
+        DBManager.sharedInstance.deleteOrderedProductsFromDB()
+    }
+    
+    func addProductToDB(item : ProductItem){
+        DBManager.sharedInstance.saveDataToDB(model: item)
+    }
+}
+
+

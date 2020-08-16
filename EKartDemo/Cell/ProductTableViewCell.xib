@@ -91,6 +91,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addToCartButtonHeightConstraint" destination="efo-Hk-0uT" id="wgZ-Ag-bJZ"/>
                 <outlet property="addtoCartButton" destination="3nu-68-UF8" id="cmH-n1-65D"/>
                 <outlet property="productImage" destination="5bM-Sn-55C" id="abQ-yy-uDo"/>
                 <outlet property="productNameLabel" destination="ETo-nA-ZVO" id="2Es-iI-gzn"/>

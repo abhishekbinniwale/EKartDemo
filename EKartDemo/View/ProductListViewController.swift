@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class ProductListViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , TableViewCellResponceProtocol{
 
     @IBOutlet weak var tableView: UITableView!
     let cellId = "ProductTableViewCell"
-    var viewModels: [ProductViewModel]?
+    private var viewModel = ProductViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,25 +35,33 @@ class ProductListViewController: UIViewController , UITableViewDelegate , UITabl
     }
     
     func getData(){
-        NetworkingAPIManager.sharedInstance.fetchData { (productModels) in
-            self.viewModels = productModels?.map({ return ProductViewModel(model: $0) }) ?? []
+        viewModel.fetchDataFromServer { [weak self] in
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels?.count ?? 0
+        return viewModel.viewModels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? ProductTableViewCell {
-            if let viewModel = viewModels?[indexPath.row] {
-                cell.configureCellWithVM(viewModel: viewModel)
+            if let viewModel = viewModel.viewModels?[indexPath.row] {
+                cell.configureCellWithVM(viewModel: viewModel, isAddToCartVisible: false)
             }
+            cell.tableViewCellResponcedelegate = self
          return cell
         }
         return UITableViewCell()
+    }
+    
+    func addTocartButtonTaped(item: ProductItem) {
+        self.viewModel.addProductToDB(item: item)
+        let alert = UIAlertController(title: "Added TO Cart", message: "\(item.name) added to your cart", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel) { (action) in }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
 }
