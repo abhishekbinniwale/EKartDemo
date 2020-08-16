@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,10 @@
 		481F152224E6F1DF0067C7FE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152124E6F1DF0067C7FE /* DBManager.swift */; };
 		481F152524E7CE320067C7FE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152424E7CE320067C7FE /* CustomImageView.swift */; };
 		481F152824E7D8F90067C7FE /* ProductDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152724E7D8F90067C7FE /* ProductDBModel.swift */; };
+		481F152A24E965230067C7FE /* NetworkAPIManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152924E965230067C7FE /* NetworkAPIManagerTest.swift */; };
+		481F152C24E965CB0067C7FE /* ProductItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152B24E965CB0067C7FE /* ProductItemTest.swift */; };
+		481F152E24E966A60067C7FE /* ProductModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152D24E966A60067C7FE /* ProductModelTest.swift */; };
+		481F153024E967290067C7FE /* ProductViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F152F24E967290067C7FE /* ProductViewModelTest.swift */; };
 		EB0BF98F9FB84608954620F4 /* Pods_EKartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1476C1C2B9431ABC1279E2FB /* Pods_EKartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		481F152124E6F1DF0067C7FE /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		481F152424E7CE320067C7FE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		481F152724E7D8F90067C7FE /* ProductDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDBModel.swift; sourceTree = "<group>"; };
+		481F152924E965230067C7FE /* NetworkAPIManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIManagerTest.swift; sourceTree = "<group>"; };
+		481F152B24E965CB0067C7FE /* ProductItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemTest.swift; sourceTree = "<group>"; };
+		481F152D24E966A60067C7FE /* ProductModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelTest.swift; sourceTree = "<group>"; };
+		481F152F24E967290067C7FE /* ProductViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModelTest.swift; sourceTree = "<group>"; };
 		5C4BDDCF5CB2C850A35CF16F /* Pods-EKartDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKartDemoTests.release.xcconfig"; path = "Target Support Files/Pods-EKartDemoTests/Pods-EKartDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C66EA0E18E562B355F7C5E0 /* Pods-EKartDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKartDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-EKartDemoTests/Pods-EKartDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8382FF64E333046A3771ADA /* Pods_EKartDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKartDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +142,10 @@
 			children = (
 				481F150024E68AC60067C7FE /* EKartDemoTests.swift */,
 				481F150224E68AC60067C7FE /* Info.plist */,
+				481F152924E965230067C7FE /* NetworkAPIManagerTest.swift */,
+				481F152B24E965CB0067C7FE /* ProductItemTest.swift */,
+				481F152D24E966A60067C7FE /* ProductModelTest.swift */,
+				481F152F24E967290067C7FE /* ProductViewModelTest.swift */,
 			);
 			path = EKartDemoTests;
 			sourceTree = "<group>";
@@ -222,7 +234,6 @@
 				9C66EA0E18E562B355F7C5E0 /* Pods-EKartDemoTests.debug.xcconfig */,
 				5C4BDDCF5CB2C850A35CF16F /* Pods-EKartDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -414,7 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481F152C24E965CB0067C7FE /* ProductItemTest.swift in Sources */,
 				481F150124E68AC60067C7FE /* EKartDemoTests.swift in Sources */,
+				481F152A24E965230067C7FE /* NetworkAPIManagerTest.swift in Sources */,
+				481F152E24E966A60067C7FE /* ProductModelTest.swift in Sources */,
+				481F153024E967290067C7FE /* ProductViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
