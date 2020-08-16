@@ -37,4 +37,12 @@ class ProductCheckoutViewController: UIViewController, UITableViewDelegate, UITa
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
 }
