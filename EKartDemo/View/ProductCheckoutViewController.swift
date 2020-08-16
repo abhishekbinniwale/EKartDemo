@@ -14,6 +14,11 @@ class ProductCheckoutViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var checkoutButton: UIButton!
     
     @IBOutlet weak var emptyCartLabel: UILabel!
+    
+    @IBOutlet weak var numberOfItemsInCart: UILabel!
+    
+    @IBOutlet weak var amoutToBePaidLabel: UILabel!
+    
     let cellId = "ProductTableViewCell"
     
     private var viewModel = ProductViewModel()
@@ -22,20 +27,46 @@ class ProductCheckoutViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         tableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
         self.getData()
+        self.setUpUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.getData()
+    }
+    
+    func setUpUI(){
+        self.checkoutButton.layer.cornerRadius = self.checkoutButton.frame.height/2
+        self.numberOfItemsInCart.isHidden = true
+        self.amoutToBePaidLabel.isHidden = true
+    }
+    
     func getData(){
         viewModel.fetchDataFromDB { [weak self] in
             DispatchQueue.main.async {
                 if let count = self?.viewModel.viewModels?.count {
-                    self?.checkoutButton.isEnabled = count > 0 ? true : false
-                    self?.emptyCartLabel.isHidden = count > 0 ? true : false
+                    self?.checkoutButton.isHidden = count > 0 ? false : true
+                    if count == 0 {
+                        self?.view.bringSubviewToFront(self!.emptyCartLabel)
+                    }
+                    self?.updateCartValueAndNumberOfItems(count: count)
                 }
                 self?.tableView.reloadData()
             }
         }
     }
 
+    func updateCartValueAndNumberOfItems(count: Int){
+        if count > 0 {
+            self.numberOfItemsInCart.isHidden = false
+            self.amoutToBePaidLabel.isHidden = false
+            
+            self.numberOfItemsInCart.text = "Number of Items in cart :   \(count)"
+            let amount = self.viewModel.viewModels?.reduce(0, { (amount, item) -> Int in
+                return  amount + (Int(item.price) ?? 0)
+            })
+            self.amoutToBePaidLabel.text = "Total Amount to be pay :  \(amount ?? 0)₹"
+        }
+    }
 
     @IBAction func checkoutButtonAction(_ sender: Any) {
         ///Pop from cart view and load Order placed view
