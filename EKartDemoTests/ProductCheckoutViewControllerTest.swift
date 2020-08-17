@@ -9,8 +9,8 @@
 import XCTest
 @testable import EKartDemo
 class ProductCheckoutViewControllerTest: XCTestCase {
-
-   var productController : ProductCheckoutViewController!
+    
+    var productController : ProductCheckoutViewController!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -36,5 +36,31 @@ class ProductCheckoutViewControllerTest: XCTestCase {
     func testTableViewHasCells() {
         let cell = productController.tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell")
         XCTAssertNotNil(cell,"TableView should be able to dequeue cell with identifier: 'Cell'")
+    }
+    
+    func testTableViewHasDelegate() {
+        XCTAssertNotNil(productController.tableView.delegate)
+    }
+    
+    func testTableViewConfromsToTableViewDelegateProtocol() {
+        XCTAssertTrue(productController.conforms(to: UITableViewDelegate.self))
+    }
+    
+    func testTableViewHasDataSource() {
+        XCTAssertNotNil(productController.tableView.dataSource)
+    }
+    
+    func testTableViewConformsToTableViewDataSourceProtocol() {
+        XCTAssertTrue(productController.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(productController.responds(to: #selector(productController.numberOfSections(in:))))
+        XCTAssertTrue(productController.responds(to: #selector(productController.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(productController.responds(to: #selector(productController.tableView(_:cellForRowAt:))))
+    }
+    
+    func testTableViewCellHasReuseIdentifier() {
+        let cell = productController.tableView(productController.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? ProductTableViewCell
+        let actualReuseIdentifer = cell?.reuseIdentifier
+        let expectedReuseIdentifier = "ProductTableViewCell"
+        XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
     }
 }

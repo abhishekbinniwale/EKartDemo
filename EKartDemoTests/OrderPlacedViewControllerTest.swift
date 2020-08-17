@@ -8,14 +8,7 @@
 
 import XCTest
 @testable import EKartDemo
-/*
- ontinueShoppingButton: UIButton!
- 
- @IBOutlet weak var loadingView: UIView!
- 
- @IBOutlet weak var indicatorview: UIActivityIndicatorView!
- 
- @IBOutlet weak var loadingLabel: UILabel!*/
+
 class OrderPlacedViewControllerTest: XCTestCase {
     
     var productController : OrderPlacedViewController!

@@ -81,6 +81,10 @@ class ProductCheckoutViewController: UIViewController, UITableViewDelegate, UITa
         return self.viewModel.viewModels?.count ?? 0
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+           return 1
+       }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? ProductTableViewCell {
