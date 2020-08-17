@@ -21,7 +21,7 @@ class ProductCheckoutViewController: UIViewController, UITableViewDelegate, UITa
     
     let cellId = "ProductTableViewCell"
     
-    private var viewModel = ProductViewModel()
+    var viewModel = ProductViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

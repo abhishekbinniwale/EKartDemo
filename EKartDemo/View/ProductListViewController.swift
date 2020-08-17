@@ -12,7 +12,7 @@ class ProductListViewController: UIViewController , UITableViewDelegate , UITabl
     
     @IBOutlet weak var tableView: UITableView!
     let cellId = "ProductTableViewCell"
-    private var viewModel = ProductViewModel()
+    var viewModel = ProductViewModel()
     
     var container: UIView = UIView()
     var loadingView: UIView = UIView()
@@ -69,6 +69,7 @@ class ProductListViewController: UIViewController , UITableViewDelegate , UITabl
             let alert = UIAlertController(title: "Added TO Cart", message: "\(item.name) added to your cart", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel) { (action) in }
             alert.addAction(action)
+            alert.view.tintColor = UIColor.black
             self.present(alert, animated: true, completion: nil)
         }
     }

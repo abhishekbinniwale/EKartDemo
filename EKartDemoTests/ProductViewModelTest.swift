@@ -40,8 +40,5 @@ class ProductViewModelTest: XCTestCase {
         DBManager.sharedInstance.fetchAllProductsAddedToCart { (products) in
             XCTAssertNotNil(products)
         }
-        
     }
-    
-
 }
